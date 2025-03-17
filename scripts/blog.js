@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-let queryString = window.location.href;
+let queryString = window.location.href.split('?')[1];
 const urlParams = new URLSearchParams(queryString);
 let currentBlog = Number(urlParams.get("id"));
 let blog = undefined;
@@ -49,6 +49,7 @@ const renderBlog = () => {
         header.innerHTML = `
     <h1>${blog === null || blog === void 0 ? void 0 : blog.title}</h1>
     <p><u>Date: ${blog === null || blog === void 0 ? void 0 : blog.date}</u></p>
+    <p>${blog === null || blog === void 0 ? void 0 : blog.content}</p>
     `;
     }
 };

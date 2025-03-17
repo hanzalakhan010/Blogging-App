@@ -12,6 +12,7 @@ async function loadBlogsV1() {
   } catch (err) {
     await loadBlogsV2();
   } finally {
+    
     renderBlogs();
   }
 }
@@ -30,7 +31,6 @@ async function loadBlogsV2() {
 const renderBlogs = () => {
   console.log(blogs.length);
   blogs.forEach((blog: Blog) => {
-    console.log(blog);
     let blogsDiv = document.getElementById("blogs");
     blogsDiv?.insertAdjacentHTML(
       "beforeend",

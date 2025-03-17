@@ -43,7 +43,6 @@ function loadBlogsV2() {
 const renderBlogs = () => {
     console.log(blogs.length);
     blogs.forEach((blog) => {
-        console.log(blog);
         let blogsDiv = document.getElementById("blogs");
         blogsDiv === null || blogsDiv === void 0 ? void 0 : blogsDiv.insertAdjacentHTML("beforeend", `
                 <div class = 'blog'>

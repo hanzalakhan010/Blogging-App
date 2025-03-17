@@ -1,4 +1,4 @@
-let queryString = window.location.href;
+let queryString = window.location.href.split('?')[1];
 const urlParams = new URLSearchParams(queryString);
 
 let currentBlog = Number(urlParams.get("id"))
@@ -22,22 +22,23 @@ async function loadBlog() {
 // V2 means data is fetched through our way and this route is only taken when json server is not working
 
 async function loadBlogV2() {
-    let response = await fetch("../data/db.json");
-    let data = await response.json();
-    if (data) {
-      blog = data.blogs.find((blog: Blog) => blog.id === currentBlog);
-    }   
+  let response = await fetch("../data/db.json");
+  let data = await response.json();
+  if (data) {
+    blog = data.blogs.find((blog: Blog) => blog.id === currentBlog);
+  }
 }
 // V2 _____________________________________________________________________________________________________
 
 const renderBlog = () => {
-    console.log(blog);
+  console.log(blog);
   let header = document.getElementById("header");
   let content = document.getElementById("content");
   if (header) {
     header.innerHTML = `
     <h1>${blog?.title}</h1>
     <p><u>Date: ${blog?.date}</u></p>
+    <p>${blog?.content}</p>
     `;
   }
 };
