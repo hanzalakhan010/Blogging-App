@@ -5,9 +5,42 @@ h1{
 .blog{
     border: .4px solid gray;
     margin: 3px;
-    padding: 5px;
+    padding: 10px;
 }
 .blog .title{
     font-weight: bolder;
     font-size: x-large;
+}
+.tag{
+    margin: 3px;
+    padding: 4px;
+    border-radius: 5px;
+}
+.tag:nth-child(4n+1){
+    background-color: rgb(101, 255, 255);
+}
+.tag:nth-child(4n+2){
+    background-color: rgb(85, 236, 92);
+}.tag:nth-child(4n+3){
+    background-color: rgb(111, 101, 255);
+}.tag:nth-child(4n){
+    background-color: rgb(206, 101, 255);
+}
+
+p.like{
+    background-color: greenyellow;
+    width: 17%;
+    padding: 10px;
+    border-radius: 20px;
+}
+p a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 900px){
+    .blog{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
 }
