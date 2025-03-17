@@ -39,7 +39,7 @@ const renderBlogs = () => {
     blogs.forEach((blog) => {
         console.log(blog);
         let blogsDiv = document.getElementById('blogs');
-        blogsDiv === null || blogsDiv === void 0 ? void 0 : blogsDiv.insertAdjacentHTML('afterend', `
+        blogsDiv === null || blogsDiv === void 0 ? void 0 : blogsDiv.insertAdjacentHTML('beforeend', `
                 <div class = 'blog'>
                     <p class = 'title'>${blog.title}</p>
                     <p>Date: ${blog.date}</p>

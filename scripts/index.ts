@@ -28,7 +28,7 @@ const renderBlogs = () => {
     blogs.forEach((blog: Blog) => {
         console.log(blog)
         let blogsDiv = document.getElementById('blogs')
-        blogsDiv?.insertAdjacentHTML('afterend', `
+        blogsDiv?.insertAdjacentHTML('beforeend', `
                 <div class = 'blog'>
                     <p class = 'title'>${blog.title}</p>
                     <p>Date: ${blog.date}</p>
