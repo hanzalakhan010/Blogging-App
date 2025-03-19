@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 let queryString = window.location.href.split('?')[1];
 const urlParams = new URLSearchParams(queryString);
+const apiKey = 'lZE8TZ/P5vjFf8ruEpBU+w==PMRnYSk8dj5A2t5f';
 let currentBlog = Number(urlParams.get("id"));
 let blog = undefined;
 // V1 means data is simply fetched over json server
@@ -41,8 +42,19 @@ function loadBlogV2() {
     });
 }
 // V2 _____________________________________________________________________________________________________
-const renderBlog = () => {
-    console.log(blog);
+const loremText = (para) => __awaiter(void 0, void 0, void 0, function* () {
+    let response = yield fetch(`https://api.api-ninjas.com/v1/loremipsum?paragraphs=${para}`, {
+        headers: {
+            'X-Api-Key': apiKey
+        }
+    });
+    let data = yield response.json();
+    if (data && blog) {
+        blog.content += data.text.split('.').join('<br>');
+    }
+});
+const renderBlog = () => __awaiter(void 0, void 0, void 0, function* () {
+    // await loremText(10)
     let header = document.getElementById("header");
     let content = document.getElementById("content");
     if (header) {
@@ -52,4 +64,4 @@ const renderBlog = () => {
     <p>${blog === null || blog === void 0 ? void 0 : blog.content}</p>
     `;
     }
-};
+});
