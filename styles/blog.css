@@ -1,4 +1,12 @@
-section{
-    margin-right: 100px;
-    margin-left: 100px;
+section {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.comments {
+    padding: 5px;
+}
+
+.comment {
+    border-bottom: .1px solid black;
 }

@@ -12,7 +12,6 @@ async function loadBlogsV1() {
   } catch (err) {
     await loadBlogsV2();
   } finally {
-    
     renderBlogs();
   }
 }
@@ -41,7 +40,9 @@ const renderBlogs = () => {
                         .map((tag) => `<span class = 'tag'>${tag}</span>`)
                         .join("")}
                     </div>
-                    <p class = 'title'><a href = "/blog.html?id=${blog.id}">${blog.title}</a></p>
+                    <p class = 'title'><a href = "/blog.html?id=${blog.id}">${
+        blog.title
+      }</a></p>
                     <p><u>Date: ${blog.date}</u></p>
                     <p>"${blog.content}"</p>
                     <p class = 'like'>Likes : ${blog.likes}</p>
