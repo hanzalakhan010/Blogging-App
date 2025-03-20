@@ -1,5 +1,4 @@
 "use strict";
-// V1 means data is simply fetched over json server
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -9,8 +8,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// V1 means data is simply fetched over json server
 let blogs = [];
-let host = "http://localhost:5555";
+// let host: string = "http://localhost:5555";
+let host = "https://studious-carnival-644w6rgwr9p2rq9q-5555.app.github.dev";
 function loadBlogsV1() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -22,6 +23,7 @@ function loadBlogsV1() {
         }
         catch (err) {
             yield loadBlogsV2();
+            console.log('from v2');
         }
         finally {
             renderBlogs();

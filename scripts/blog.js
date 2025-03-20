@@ -13,8 +13,10 @@ const urlParams = new URLSearchParams(queryString);
 const apiKey = "lZE8TZ/P5vjFf8ruEpBU+w==PMRnYSk8dj5A2t5f";
 let currentBlog = Number(urlParams.get("id"));
 let blog = undefined;
+let host = "https://studious-carnival-644w6rgwr9p2rq9q-5555.app.github.dev";
 // V1 means data is simply fetched over json server
 const loadBlog = () => __awaiter(void 0, void 0, void 0, function* () {
+    console.log(`${host}/blogs/${currentBlog}`);
     try {
         let response = yield fetch(`${host}/blogs/${currentBlog}`);
         let data = yield response.json();
@@ -51,9 +53,9 @@ const loremText = (para) => __awaiter(void 0, void 0, void 0, function* () {
 });
 const renderBlog = () => __awaiter(void 0, void 0, void 0, function* () {
     // await loremText(10)
-    console.log(blog === null || blog === void 0 ? void 0 : blog.comments);
     let header = document.getElementById("header");
     let content = document.getElementById("content");
+    let comments = document.getElementById('comments');
     if (header && blog) {
         header.innerHTML = `
     <h1>${blog === null || blog === void 0 ? void 0 : blog.title}</h1>
@@ -66,10 +68,23 @@ const renderBlog = () => __awaiter(void 0, void 0, void 0, function* () {
         content.innerHTML = `
     <p>${blog === null || blog === void 0 ? void 0 : blog.content}</p>
     <div class = 'comments'>
-    <h3>Comments</h3>
-    ${blog.comments
-            .map((comment) => `<div class = 'comment'><p>${comment.date}</p><p>${comment.text}</p></div>`)
-            .join(" ")}</div>
     `;
     }
+    if (blog && comments) {
+        blog.comments.forEach((comment) => {
+            comments.insertAdjacentHTML('beforeend', `
+          <div>
+            <p>${comment.date}</p>
+            <p>${comment.text}</p>
+          </div>
+        `);
+        });
+    }
 });
+function addComment() {
+    let comment = document.getElementById('commentText');
+    let commentText = comment.value;
+    if (commentText) {
+    }
+}
+loadBlog();
