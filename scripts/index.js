@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 // V1 means data is simply fetched over json server
 let blogs = [];
-let host = "http://localhost:5555";
+var host = "http://localhost:5555";
 function loadBlogsV1() {
     return __awaiter(this, void 0, void 0, function* () {
         try {

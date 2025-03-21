@@ -8,5 +8,9 @@ section {
 }
 
 .comment {
-    border-bottom: .1px solid black;
+    border-top: .1px solid black;
+    margin-top: 3px;
+}
+#commentText{
+    width: 84%;
 }

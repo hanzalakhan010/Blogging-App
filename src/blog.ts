@@ -4,8 +4,9 @@ const urlParams = new URLSearchParams(queryString);
 const apiKey: string = "lZE8TZ/P5vjFf8ruEpBU+w==PMRnYSk8dj5A2t5f";
 let currentBlog = Number(urlParams.get("id"));
 let blog: Blog | undefined = undefined;
-// V1 means data is simply fetched over json server
+var host: string = "http://localhost:5555";
 
+// V1 means data is simply fetched over json server
 
 const loadBlog = async () => {
   try {
@@ -16,7 +17,6 @@ const loadBlog = async () => {
     }
   } catch (err) {
     await loadBlogV2();
-
   } finally {
     renderBlog();
   }
@@ -50,7 +50,7 @@ const renderBlog = async () => {
   // await loremText(10)
   let header = document.getElementById("header");
   let content = document.getElementById("content");
-  let comments = document.getElementById('comments')
+  let comments = document.getElementById("comments");
   if (header && blog) {
     header.innerHTML = `
     <h1>${blog?.title}</h1>
@@ -63,34 +63,60 @@ const renderBlog = async () => {
     content.innerHTML = `
     <p>${blog?.content}</p>
     <div class = 'comments'>
-    `
+    `;
   }
   if (blog && comments) {
     blog.comments.forEach(async (comment) => {
-      comments.insertAdjacentHTML('beforeend', `
-          <div>
+      comments.insertAdjacentHTML(
+        "beforeend",
+        `
+          <div class='comment'>
             <p>${comment.date}</p>
             <p>${comment.text}</p>
             <p>${await getUserName(comment.userId)}</p>
             </div>
-            `)
-          })
+            `
+      );
+    });
   }
 };
-function addComment(){
-  let comment = document.getElementById('commentText') as HTMLInputElement
-  let commentText = comment.value
-  if (commentText){
-    console.log(commentText)
-  } 
+async function addComment() {
+  let comment = document.getElementById("commentText") as HTMLInputElement;
+  let commentText = comment.value;
+  let __blog = blog;
+  let loginUserID = parseInt(localStorage.getItem("loginUser") || "0");
+  let date = new Date().toDateString()
+  __blog?.comments.push({
+    id: blog?.comments?.length ? blog.comments.length + 1 : 1,
+    userId: loginUserID,
+    text: commentText,
+    date,
+  });
+  if (commentText) {
+    comment.value = ''
+    let response = await fetch(`${host}/blogs/${currentBlog}`, {
+      method: "PATCH",
+      body: JSON.stringify({ comments: blog?.comments }),
+    });
+    // let data = await response.json();
+    if (response.ok){
+      let commentsDiv = document.getElementById("comments");
+      commentsDiv?.insertAdjacentHTML('beforeend',`
+        <div class='comment'>
+            <p>${date}</p>
+            <p>${commentText}</p>
+            <p>${await getUserName(loginUserID)}</p>
+            </div>
+        `)
+    }
+  }
 }
-declare global{
-  interface Window{
-    addComment:()=>void;
-    loadBlog:()=>void
-
+declare global {
+  interface Window {
+    addComment: () => void;
+    loadBlog: () => void;
   }
 }
 
-window.loadBlog = loadBlog
-window.addComment = addComment
+window.loadBlog = loadBlog;
+window.addComment = addComment;

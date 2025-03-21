@@ -1,6 +1,6 @@
 // V1 means data is simply fetched over json server
 let blogs: Blog[] = [];
-let host: string = "http://localhost:5555";
+var host: string = "http://localhost:5555";
 async function loadBlogsV1() {
   try {
     let response = await fetch(`${host}/blogs`);

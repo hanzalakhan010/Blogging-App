@@ -17,7 +17,7 @@ function getUserName(id) {
             users = data;
         }
         let user = users.find((user) => user.id == id);
-        return user === null || user === void 0 ? void 0 : user.name;
+        return user ? user.name : 'Anonynums';
     });
 }
 export default getUserName;

@@ -8,7 +8,7 @@ async function getUserName(id: Number): Promise<String | undefined> {
     users = data;
   }
   let user = users.find((user) => user.id == id);
-  return user?.name;
+  return user? user.name:'Anonynums';
 }
 
 export default getUserName;
