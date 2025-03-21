@@ -1,4 +1,14 @@
-export default function getUserName(id: Number): User | null {
-    console.log('ff')
-    return null
+let host: string = "http://localhost:5555";
+let users: User[] = [];
+
+async function getUserName(id: Number): Promise<String | undefined> {
+  let response = await fetch(`${host}/users`);
+  let data = await response.json();
+  if (data) {
+    users = data;
+  }
+  let user = users.find((user) => user.id == id);
+  return user?.name;
 }
+
+export default getUserName;

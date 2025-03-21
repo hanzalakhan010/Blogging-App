@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,15 +7,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import getUserName from "./users.js";
 let queryString = window.location.href.split("?")[1];
 const urlParams = new URLSearchParams(queryString);
 const apiKey = "lZE8TZ/P5vjFf8ruEpBU+w==PMRnYSk8dj5A2t5f";
 let currentBlog = Number(urlParams.get("id"));
 let blog = undefined;
-let host = "https://studious-carnival-644w6rgwr9p2rq9q-5555.app.github.dev";
 // V1 means data is simply fetched over json server
 const loadBlog = () => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(`${host}/blogs/${currentBlog}`);
     try {
         let response = yield fetch(`${host}/blogs/${currentBlog}`);
         let data = yield response.json();
@@ -71,20 +69,23 @@ const renderBlog = () => __awaiter(void 0, void 0, void 0, function* () {
     `;
     }
     if (blog && comments) {
-        blog.comments.forEach((comment) => {
+        blog.comments.forEach((comment) => __awaiter(void 0, void 0, void 0, function* () {
             comments.insertAdjacentHTML('beforeend', `
           <div>
             <p>${comment.date}</p>
             <p>${comment.text}</p>
-          </div>
-        `);
-        });
+            <p>${yield getUserName(comment.userId)}</p>
+            </div>
+            `);
+        }));
     }
 });
 function addComment() {
     let comment = document.getElementById('commentText');
     let commentText = comment.value;
     if (commentText) {
+        console.log(commentText);
     }
 }
-loadBlog();
+window.loadBlog = loadBlog;
+window.addComment = addComment;

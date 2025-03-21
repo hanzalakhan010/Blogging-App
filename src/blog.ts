@@ -1,14 +1,13 @@
+import getUserName from "./users.js";
 let queryString = window.location.href.split("?")[1];
 const urlParams = new URLSearchParams(queryString);
 const apiKey: string = "lZE8TZ/P5vjFf8ruEpBU+w==PMRnYSk8dj5A2t5f";
 let currentBlog = Number(urlParams.get("id"));
 let blog: Blog | undefined = undefined;
-let host: string = "https://studious-carnival-644w6rgwr9p2rq9q-5555.app.github.dev";
 // V1 means data is simply fetched over json server
 
 
 const loadBlog = async () => {
-  console.log(`${host}/blogs/${currentBlog}`)
   try {
     let response = await fetch(`${host}/blogs/${currentBlog}`);
     let data = await response.json();
@@ -67,22 +66,31 @@ const renderBlog = async () => {
     `
   }
   if (blog && comments) {
-    blog.comments.forEach((comment) => {
+    blog.comments.forEach(async (comment) => {
       comments.insertAdjacentHTML('beforeend', `
           <div>
             <p>${comment.date}</p>
             <p>${comment.text}</p>
-          </div>
-        `)
-    })
+            <p>${await getUserName(comment.userId)}</p>
+            </div>
+            `)
+          })
   }
 };
 function addComment(){
   let comment = document.getElementById('commentText') as HTMLInputElement
   let commentText = comment.value
   if (commentText){
-
+    console.log(commentText)
   } 
 }
+declare global{
+  interface Window{
+    addComment:()=>void;
+    loadBlog:()=>void
 
-loadBlog()
+  }
+}
+
+window.loadBlog = loadBlog
+window.addComment = addComment
