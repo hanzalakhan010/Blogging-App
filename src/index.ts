@@ -1,6 +1,7 @@
 // V1 means data is simply fetched over json server
 let blogs: Blog[] = [];
 var host: string = "http://localhost:5555";
+let totalBlogs = 40
 
 let queryString = window.location.href.split("?")[1];
 const urlParams = new URLSearchParams(queryString);
@@ -33,6 +34,8 @@ async function loadBlogsV2() {
 
 // _____________________________________________________________________________________________________
 
+
+
 const renderBlogs = () => {
   console.log(blogs.length);
   blogs.forEach((blog: Blog) => {
@@ -57,14 +60,38 @@ const renderBlogs = () => {
   });
 };
 
-
-
-document.body.onload = ()=>{
-  
-  if (!othertypeOfSearches){
-    loadBlogsV1()
-  }else{
-  
+const loadOthers = async () => {
+  let randomList: Array<number> = []
+  for (let i = 0; i < 10; i++) {
+    let random = Math.floor(Math.random() * totalBlogs)
+    if (!randomList.includes(random)) {
+      try {
+        let response = await fetch(`${host}/blogs/${random}`)
+        let data = await response.json()
+        if (data) {
+          blogs.push(data)
+        }
+      }
+      catch {
+        loadBlogsV1()
+      }
+    }
+    else {
+      i--
+    }
   }
-  
+
+  renderBlogs()
+
+}
+
+document.body.onload = () => {
+
+  if (!othertypeOfSearches) {
+    loadBlogsV1()
+  } else {
+    loadOthers()
+
+  }
+
 }

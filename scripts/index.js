@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 // V1 means data is simply fetched over json server
 let blogs = [];
 var host = "http://localhost:5555";
+let totalBlogs = 40;
 let queryString = window.location.href.split("?")[1];
 const urlParams = new URLSearchParams(queryString);
 const othertypeOfSearches = urlParams.get('type');
@@ -63,10 +64,33 @@ const renderBlogs = () => {
             `);
     });
 };
+const loadOthers = () => __awaiter(void 0, void 0, void 0, function* () {
+    let randomList = [];
+    for (let i = 0; i < 10; i++) {
+        let random = Math.floor(Math.random() * totalBlogs);
+        if (!randomList.includes(random)) {
+            try {
+                let response = yield fetch(`${host}/blogs/${random}`);
+                let data = yield response.json();
+                if (data) {
+                    blogs.push(data);
+                }
+            }
+            catch (_a) {
+                loadBlogsV1();
+            }
+        }
+        else {
+            i--;
+        }
+    }
+    renderBlogs();
+});
 document.body.onload = () => {
     if (!othertypeOfSearches) {
         loadBlogsV1();
     }
     else {
+        loadOthers();
     }
 };
