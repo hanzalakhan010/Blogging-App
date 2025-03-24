@@ -11,11 +11,24 @@ let host = "http://localhost:5555";
 let users = [];
 function getUserName(id) {
     return __awaiter(this, void 0, void 0, function* () {
-        let response = yield fetch(`${host}/users`);
-        let data = yield response.json();
-        if (data) {
-            users = data;
+        if (id == 0)
+            return 'Anonynoums';
+        if (users.length <= 0) {
+            try {
+                let response = yield fetch(`${host}/users/${id}`);
+                let data = yield response.json();
+                return data ? data.name : 'Anonynums';
+            }
+            catch (_a) {
+                let response = yield fetch('../data/db.json');
+                let data = yield response.json();
+                if (data) {
+                    // console.log(data.users)
+                    users = data.users;
+                }
+            }
         }
+        console.log(users);
         let user = users.find((user) => user.id == id);
         return user ? user.name : 'Anonynums';
     });

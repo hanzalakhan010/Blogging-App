@@ -32,10 +32,13 @@ const loadBlog = () => __awaiter(void 0, void 0, void 0, function* () {
 });
 // V2 means data is fetched through our way and this route is only taken when json server is not working
 const loadBlogV2 = () => __awaiter(void 0, void 0, void 0, function* () {
+    console.log('degbug');
     let response = yield fetch("../data/db.json");
     let data = yield response.json();
     if (data) {
-        blog = data.blogs.find((blog) => blog.id === currentBlog);
+        console.log('debug2');
+        blog = data.blogs.find((blog) => blog.id == currentBlog);
+        console.log(currentBlog);
     }
 });
 // V2 _____________________________________________________________________________________________________
@@ -55,6 +58,7 @@ const renderBlog = () => __awaiter(void 0, void 0, void 0, function* () {
     let header = document.getElementById("header");
     let content = document.getElementById("content");
     let comments = document.getElementById("comments");
+    console.log(comments);
     if (header && blog) {
         header.innerHTML = `
     <h1>${blog === null || blog === void 0 ? void 0 : blog.title}</h1>

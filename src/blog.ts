@@ -24,10 +24,13 @@ const loadBlog = async () => {
 // V2 means data is fetched through our way and this route is only taken when json server is not working
 
 const loadBlogV2 = async () => {
+  console.log('degbug')
   let response = await fetch("../data/db.json");
   let data = await response.json();
   if (data) {
-    blog = data.blogs.find((blog: Blog) => blog.id === currentBlog);
+    console.log('debug2')
+    blog = data.blogs.find((blog: Blog) => blog.id == currentBlog);
+    console.log(currentBlog)
   }
 };
 // V2 _____________________________________________________________________________________________________
@@ -51,6 +54,7 @@ const renderBlog = async () => {
   let header = document.getElementById("header");
   let content = document.getElementById("content");
   let comments = document.getElementById("comments");
+  console.log(comments)
   if (header && blog) {
     header.innerHTML = `
     <h1>${blog?.title}</h1>
@@ -99,9 +103,9 @@ async function addComment() {
       body: JSON.stringify({ comments: blog?.comments }),
     });
     // let data = await response.json();
-    if (response.ok){
+    if (response.ok) {
       let commentsDiv = document.getElementById("comments");
-      commentsDiv?.insertAdjacentHTML('beforeend',`
+      commentsDiv?.insertAdjacentHTML('beforeend', `
         <div class='comment'>
             <p>${date}</p>
             <p>${commentText}</p>
