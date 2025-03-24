@@ -32,7 +32,6 @@ const loadBlog = () => __awaiter(void 0, void 0, void 0, function* () {
 });
 // V2 means data is fetched through our way and this route is only taken when json server is not working
 const loadBlogV2 = () => __awaiter(void 0, void 0, void 0, function* () {
-    console.log('degbug');
     let response = yield fetch("../data/db.json");
     let data = yield response.json();
     if (data) {
@@ -58,6 +57,9 @@ const renderBlog = () => __awaiter(void 0, void 0, void 0, function* () {
     let header = document.getElementById("header");
     let content = document.getElementById("content");
     let comments = document.getElementById("comments");
+    if (blog) {
+        document.title = blog.title;
+    }
     console.log(comments);
     if (header && blog) {
         header.innerHTML = `
@@ -83,6 +85,9 @@ const renderBlog = () => __awaiter(void 0, void 0, void 0, function* () {
             </div>
             `);
         }));
+    }
+    else {
+        window.location.href = '/notFound.html';
     }
 });
 function addComment() {

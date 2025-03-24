@@ -6,7 +6,7 @@ type blogComment = {
 }
 type Blog = {
     id: Number,
-    title: String,
+    title: string,
     content: String,
     authorId: Number,
     date: String,

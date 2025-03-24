@@ -1,6 +1,12 @@
 // V1 means data is simply fetched over json server
 let blogs: Blog[] = [];
 var host: string = "http://localhost:5555";
+
+let queryString = window.location.href.split("?")[1];
+const urlParams = new URLSearchParams(queryString);
+
+const othertypeOfSearches = urlParams.get('type')
+
 async function loadBlogsV1() {
   try {
     let response = await fetch(`${host}/blogs`);
@@ -50,3 +56,15 @@ const renderBlogs = () => {
     );
   });
 };
+
+
+
+document.body.onload = ()=>{
+  
+  if (!othertypeOfSearches){
+    loadBlogsV1()
+  }else{
+  
+  }
+  
+}

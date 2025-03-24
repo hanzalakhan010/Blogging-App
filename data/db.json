@@ -367,6 +367,905 @@
           "date": "2024-04-11"
         }
       ]
+    },
+    {
+      "id": "11",
+      "title": "The Ultimate Guide to React Hooks",
+      "content": "Learn how to use React Hooks to manage state and side effects...",
+      "authorId": 1,
+      "date": "2024-04-15",
+      "tags": [
+        "react",
+        "hooks",
+        "frontend"
+      ],
+      "categories": [
+        "Web Development",
+        "Programming"
+      ],
+      "likes": 55,
+      "dislikes": 3,
+      "shares": 30,
+      "bookmarks": [
+        2,
+        3
+      ],
+      "comments": [
+        {
+          "id": 10,
+          "userId": 2,
+          "text": "This guide is a lifesaver!",
+          "date": "2024-04-16"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Exploring the Grand Canyon",
+      "content": "A detailed travelogue of my adventure in the Grand Canyon...",
+      "authorId": 3,
+      "date": "2024-04-18",
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "categories": [
+        "Travel",
+        "Lifestyle"
+      ],
+      "likes": 40,
+      "dislikes": 1,
+      "shares": 25,
+      "bookmarks": [
+        1
+      ],
+      "comments": [
+        {
+          "id": 11,
+          "userId": 1,
+          "text": "Amazing photos!",
+          "date": "2024-04-19"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Getting Started with Docker",
+      "content": "A beginner's guide to containerization with Docker...",
+      "authorId": 2,
+      "date": "2024-04-20",
+      "tags": [
+        "docker",
+        "devops"
+      ],
+      "categories": [
+        "DevOps",
+        "Programming"
+      ],
+      "likes": 65,
+      "dislikes": 2,
+      "shares": 35,
+      "bookmarks": [
+        1,
+        3
+      ],
+      "comments": [
+        {
+          "id": 12,
+          "userId": 3,
+          "text": "Very well explained!",
+          "date": "2024-04-21"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "The Benefits of Meditation",
+      "content": "How meditation can improve your mental and physical health...",
+      "authorId": 3,
+      "date": "2024-04-22",
+      "tags": [
+        "meditation",
+        "health"
+      ],
+      "categories": [
+        "Health",
+        "Lifestyle"
+      ],
+      "likes": 38,
+      "dislikes": 0,
+      "shares": 20,
+      "bookmarks": [
+        2
+      ],
+      "comments": [
+        {
+          "id": 13,
+          "userId": 2,
+          "text": "I've started meditating daily because of this post!",
+          "date": "2024-04-23"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Building a REST API with Express.js",
+      "content": "Step-by-step guide to building a REST API using Express.js...",
+      "authorId": 1,
+      "date": "2024-04-25",
+      "tags": [
+        "expressjs",
+        "api",
+        "backend"
+      ],
+      "categories": [
+        "Web Development",
+        "Backend"
+      ],
+      "likes": 70,
+      "dislikes": 4,
+      "shares": 40,
+      "bookmarks": [
+        2,
+        3
+      ],
+      "comments": [
+        {
+          "id": 14,
+          "userId": 3,
+          "text": "This tutorial is fantastic!",
+          "date": "2024-04-26"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Top 5 Tools for Remote Work",
+      "content": "Essential tools to stay productive while working remotely...",
+      "authorId": 2,
+      "date": "2024-04-28",
+      "tags": [
+        "remote-work",
+        "productivity"
+      ],
+      "categories": [
+        "Work",
+        "Lifestyle"
+      ],
+      "likes": 50,
+      "dislikes": 2,
+      "shares": 28,
+      "bookmarks": [
+        1
+      ],
+      "comments": [
+        {
+          "id": 15,
+          "userId": 1,
+          "text": "These tools are game-changers!",
+          "date": "2024-04-29"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Introduction to GraphQL",
+      "content": "Learn the basics of GraphQL and how it compares to REST...",
+      "authorId": 1,
+      "date": "2024-05-01",
+      "tags": [
+        "graphql",
+        "api",
+        "webdev"
+      ],
+      "categories": [
+        "Web Development",
+        "Backend"
+      ],
+      "likes": 60,
+      "dislikes": 3,
+      "shares": 32,
+      "bookmarks": [
+        2,
+        3
+      ],
+      "comments": [
+        {
+          "id": 16,
+          "userId": 2,
+          "text": "Great introduction to GraphQL!",
+          "date": "2024-05-02"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "The Science of Sleep",
+      "content": "Understanding the importance of sleep for overall health...",
+      "authorId": 3,
+      "date": "2024-05-05",
+      "tags": [
+        "sleep",
+        "health"
+      ],
+      "categories": [
+        "Health",
+        "Lifestyle"
+      ],
+      "likes": 45,
+      "dislikes": 1,
+      "shares": 22,
+      "bookmarks": [
+        1,
+        2
+      ],
+      "comments": [
+        {
+          "id": 17,
+          "userId": 1,
+          "text": "This post changed my sleep habits!",
+          "date": "2024-05-06"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Mastering Async/Await in JavaScript",
+      "content": "A deep dive into async/await and how to use it effectively...",
+      "authorId": 2,
+      "date": "2024-05-10",
+      "tags": [
+        "javascript",
+        "async",
+        "webdev"
+      ],
+      "categories": [
+        "Web Development",
+        "Programming"
+      ],
+      "likes": 75,
+      "dislikes": 5,
+      "shares": 45,
+      "bookmarks": [
+        1,
+        3
+      ],
+      "comments": [
+        {
+          "id": 18,
+          "userId": 3,
+          "text": "This is the best explanation I've seen!",
+          "date": "2024-05-11"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "The Art of Public Speaking",
+      "content": "Tips and techniques to become a confident public speaker...",
+      "authorId": 3,
+      "date": "2024-05-15",
+      "tags": [
+        "public-speaking",
+        "tips"
+      ],
+      "categories": [
+        "Lifestyle",
+        "Work"
+      ],
+      "likes": 48,
+      "dislikes": 2,
+      "shares": 26,
+      "bookmarks": [
+        2
+      ],
+      "comments": [
+        {
+          "id": 19,
+          "userId": 1,
+          "text": "These tips are incredibly helpful!",
+          "date": "2024-05-16"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "title": "The Future of Electric Vehicles",
+      "content": "Exploring the advancements and challenges in the EV industry...",
+      "authorId": 1,
+      "date": "2024-05-20",
+      "tags": [
+        "electric-vehicles",
+        "technology"
+      ],
+      "categories": [
+        "Technology",
+        "Automotive"
+      ],
+      "likes": 60,
+      "dislikes": 4,
+      "shares": 35,
+      "bookmarks": [
+        2,
+        3
+      ],
+      "comments": [
+        {
+          "id": 20,
+          "userId": 2,
+          "text": "Exciting times for EVs!",
+          "date": "2024-05-21"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "title": "A Culinary Journey Through Italy",
+      "content": "Discover the flavors and traditions of Italian cuisine...",
+      "authorId": 3,
+      "date": "2024-05-22",
+      "tags": [
+        "food",
+        "travel"
+      ],
+      "categories": [
+        "Food",
+        "Travel"
+      ],
+      "likes": 50,
+      "dislikes": 1,
+      "shares": 28,
+      "bookmarks": [
+        1
+      ],
+      "comments": [
+        {
+          "id": 21,
+          "userId": 1,
+          "text": "I can't wait to try these dishes!",
+          "date": "2024-05-23"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "title": "The Science of Happiness",
+      "content": "Understanding what makes us happy and how to cultivate it...",
+      "authorId": 2,
+      "date": "2024-05-25",
+      "tags": [
+        "happiness",
+        "psychology"
+      ],
+      "categories": [
+        "Health",
+        "Lifestyle"
+      ],
+      "likes": 70,
+      "dislikes": 2,
+      "shares": 40,
+      "bookmarks": [
+        1,
+        3
+      ],
+      "comments": [
+        {
+          "id": 22,
+          "userId": 3,
+          "text": "This post made my day!",
+          "date": "2024-05-26"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "title": "Exploring the Amazon Rainforest",
+      "content": "A firsthand account of my adventure in the Amazon...",
+      "authorId": 3,
+      "date": "2024-05-28",
+      "tags": [
+        "travel",
+        "adventure"
+      ],
+      "categories": [
+        "Travel",
+        "Lifestyle"
+      ],
+      "likes": 45,
+      "dislikes": 1,
+      "shares": 22,
+      "bookmarks": [
+        2
+      ],
+      "comments": [
+        {
+          "id": 23,
+          "userId": 1,
+          "text": "Incredible experience!",
+          "date": "2024-05-29"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "title": "The Rise of AI in Healthcare",
+      "content": "How AI is transforming the healthcare industry...",
+      "authorId": 1,
+      "date": "2024-06-01",
+      "tags": [
+        "ai",
+        "healthcare"
+      ],
+      "categories": [
+        "Technology",
+        "Health"
+      ],
+      "likes": 80,
+      "dislikes": 5,
+      "shares": 50,
+      "bookmarks": [
+        2,
+        3
+      ],
+      "comments": [
+        {
+          "id": 24,
+          "userId": 2,
+          "text": "Fascinating insights!",
+          "date": "2024-06-02"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "title": "10 Must-Visit Beaches in the World",
+      "content": "A list of the most beautiful beaches you need to visit...",
+      "authorId": 3,
+      "date": "2024-06-05",
+      "tags": [
+        "travel",
+        "beaches"
+      ],
+      "categories": [
+        "Travel",
+        "Lifestyle"
+      ],
+      "likes": 55,
+      "dislikes": 2,
+      "shares": 30,
+      "bookmarks": [
+        1,
+        2
+      ],
+      "comments": [
+        {
+          "id": 25,
+          "userId": 1,
+          "text": "Adding these to my bucket list!",
+          "date": "2024-06-06"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "title": "The Art of Baking Bread",
+      "content": "A beginner's guide to baking your own bread at home...",
+      "authorId": 2,
+      "date": "2024-06-10",
+      "tags": [
+        "food",
+        "baking"
+      ],
+      "categories": [
+        "Food",
+        "Lifestyle"
+      ],
+      "likes": 65,
+      "dislikes": 3,
+      "shares": 35,
+      "bookmarks": [
+        1,
+        3
+      ],
+      "comments": [
+        {
+          "id": 26,
+          "userId": 3,
+          "text": "I baked my first loaf thanks to this post!",
+          "date": "2024-06-11"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "title": "The Benefits of Yoga",
+      "content": "How yoga can improve your physical and mental well-being...",
+      "authorId": 3,
+      "date": "2024-06-15",
+      "tags": [
+        "yoga",
+        "health"
+      ],
+      "categories": [
+        "Health",
+        "Lifestyle"
+      ],
+      "likes": 48,
+      "dislikes": 1,
+      "shares": 25,
+      "bookmarks": [
+        2
+      ],
+      "comments": [
+        {
+          "id": 27,
+          "userId": 1,
+          "text": "Yoga has changed my life!",
+          "date": "2024-06-16"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "title": "The Future of Space Exploration",
+      "content": "What's next for humanity in space?",
+      "authorId": 1,
+      "date": "2024-06-20",
+      "tags": [
+        "space",
+        "technology"
+      ],
+      "categories": [
+        "Technology",
+        "Science"
+      ],
+      "likes": 75,
+      "dislikes": 4,
+      "shares": 45,
+      "bookmarks": [
+        2,
+        3
+      ],
+      "comments": [
+        {
+          "id": 28,
+          "userId": 2,
+          "text": "The future is exciting!",
+          "date": "2024-06-21"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "title": "A Guide to Sustainable Living",
+      "content": "Practical tips for living a more sustainable lifestyle...",
+      "authorId": 2,
+      "date": "2024-06-25",
+      "tags": [
+        "sustainability",
+        "lifestyle"
+      ],
+      "categories": [
+        "Lifestyle",
+        "Environment"
+      ],
+      "likes": 60,
+      "dislikes": 2,
+      "shares": 32,
+      "bookmarks": [
+        1,
+        3
+      ],
+      "comments": [
+        {
+          "id": 29,
+          "userId": 3,
+          "text": "These tips are so helpful!",
+          "date": "2024-06-26"
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "title": "The History of Coffee",
+      "content": "From ancient Ethiopia to your morning cup...",
+      "authorId": 3,
+      "date": "2024-06-30",
+      "tags": [
+        "coffee",
+        "history"
+      ],
+      "categories": [
+        "Food",
+        "Lifestyle"
+      ],
+      "likes": 40,
+      "dislikes": 1,
+      "shares": 20,
+      "bookmarks": [
+        1
+      ],
+      "comments": [
+        {
+          "id": 30,
+          "userId": 1,
+          "text": "I love learning about coffee!",
+          "date": "2024-07-01"
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "title": "The Impact of Social Media on Mental Health",
+      "content": "Understanding the pros and cons of social media...",
+      "authorId": 2,
+      "date": "2024-07-05",
+      "tags": [
+        "social-media",
+        "mental-health"
+      ],
+      "categories": [
+        "Health",
+        "Technology"
+      ],
+      "likes": 70,
+      "dislikes": 3,
+      "shares": 38,
+      "bookmarks": [
+        1,
+        3
+      ],
+      "comments": [
+        {
+          "id": 31,
+          "userId": 3,
+          "text": "This is such an important topic!",
+          "date": "2024-07-06"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "title": "The Best Hiking Trails in the US",
+      "content": "Top trails for every level of hiker...",
+      "authorId": 3,
+      "date": "2024-07-10",
+      "tags": [
+        "hiking",
+        "travel"
+      ],
+      "categories": [
+        "Travel",
+        "Lifestyle"
+      ],
+      "likes": 55,
+      "dislikes": 2,
+      "shares": 30,
+      "bookmarks": [
+        2
+      ],
+      "comments": [
+        {
+          "id": 32,
+          "userId": 1,
+          "text": "Can't wait to try these trails!",
+          "date": "2024-07-11"
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "title": "The Art of Storytelling",
+      "content": "How to craft compelling stories that captivate your audience...",
+      "authorId": 2,
+      "date": "2024-07-15",
+      "tags": [
+        "storytelling",
+        "writing"
+      ],
+      "categories": [
+        "Lifestyle",
+        "Writing"
+      ],
+      "likes": 65,
+      "dislikes": 1,
+      "shares": 35,
+      "bookmarks": [
+        1,
+        3
+      ],
+      "comments": [
+        {
+          "id": 33,
+          "userId": 3,
+          "text": "This is gold for writers!",
+          "date": "2024-07-16"
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "title": "The Rise of Plant-Based Diets",
+      "content": "Why more people are choosing plant-based diets...",
+      "authorId": 1,
+      "date": "2024-07-20",
+      "tags": [
+        "food",
+        "health"
+      ],
+      "categories": [
+        "Food",
+        "Health"
+      ],
+      "likes": 50,
+      "dislikes": 2,
+      "shares": 28,
+      "bookmarks": [
+        2
+      ],
+      "comments": [
+        {
+          "id": 34,
+          "userId": 2,
+          "text": "I've been plant-based for a year now!",
+          "date": "2024-07-21"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "title": "The Future of Renewable Energy",
+      "content": "How renewable energy is shaping the future...",
+      "authorId": 1,
+      "date": "2024-07-25",
+      "tags": [
+        "renewable-energy",
+        "technology"
+      ],
+      "categories": [
+        "Technology",
+        "Environment"
+      ],
+      "likes": 75,
+      "dislikes": 3,
+      "shares": 42,
+      "bookmarks": [
+        1,
+        3
+      ],
+      "comments": [
+        {
+          "id": 35,
+          "userId": 3,
+          "text": "This gives me hope for the future!",
+          "date": "2024-07-26"
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "title": "The Psychology of Color",
+      "content": "How colors influence our emotions and decisions...",
+      "authorId": 2,
+      "date": "2024-07-30",
+      "tags": [
+        "psychology",
+        "design"
+      ],
+      "categories": [
+        "Lifestyle",
+        "Design"
+      ],
+      "likes": 60,
+      "dislikes": 1,
+      "shares": 33,
+      "bookmarks": [
+        1,
+        2
+      ],
+      "comments": [
+        {
+          "id": 36,
+          "userId": 1,
+          "text": "Fascinating read!",
+          "date": "2024-07-31"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "title": "The Best Books of 2024",
+      "content": "A curated list of must-read books this year...",
+      "authorId": 3,
+      "date": "2024-08-05",
+      "tags": [
+        "books",
+        "reading"
+      ],
+      "categories": [
+        "Lifestyle",
+        "Books"
+      ],
+      "likes": 48,
+      "dislikes": 0,
+      "shares": 25,
+      "bookmarks": [
+        1,
+        3
+      ],
+      "comments": [
+        {
+          "id": 37,
+          "userId": 2,
+          "text": "Adding these to my reading list!",
+          "date": "2024-08-06"
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "title": "The Science of Productivity",
+      "content": "How to work smarter, not harder...",
+      "authorId": 2,
+      "date": "2024-08-10",
+      "tags": [
+        "productivity",
+        "work"
+      ],
+      "categories": [
+        "Work",
+        "Lifestyle"
+      ],
+      "likes": 70,
+      "dislikes": 2,
+      "shares": 40,
+      "bookmarks": [
+        1,
+        3
+      ],
+      "comments": [
+        {
+          "id": 38,
+          "userId": 3,
+          "text": "These tips are game-changers!",
+          "date": "2024-08-11"
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "title": "The Art of Minimalist Design",
+      "content": "How to create clean and functional designs...",
+      "authorId": 1,
+      "date": "2024-08-15",
+      "tags": [
+        "design",
+        "minimalism"
+      ],
+      "categories": [
+        "Design",
+        "Lifestyle"
+      ],
+      "likes": 55,
+      "dislikes": 1,
+      "shares": 30,
+      "bookmarks": [
+        2
+      ],
+      "comments": [
+        {
+          "id": 39,
+          "userId": 2,
+          "text": "Love the minimalist approach!",
+          "date": "2024-08-16"
+        },
+        {
+          "id": 2,
+          "userId": 0,
+          "text": "dsdasd",
+          "date": "Mon Mar 24 2025"
+        }
+      ]
     }
   ]
 }

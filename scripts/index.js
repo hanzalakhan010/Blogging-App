@@ -11,6 +11,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 // V1 means data is simply fetched over json server
 let blogs = [];
 var host = "http://localhost:5555";
+let queryString = window.location.href.split("?")[1];
+const urlParams = new URLSearchParams(queryString);
+const othertypeOfSearches = urlParams.get('type');
 function loadBlogsV1() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -59,4 +62,11 @@ const renderBlogs = () => {
                 </div>
             `);
     });
+};
+document.body.onload = () => {
+    if (!othertypeOfSearches) {
+        loadBlogsV1();
+    }
+    else {
+    }
 };

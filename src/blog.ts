@@ -24,7 +24,6 @@ const loadBlog = async () => {
 // V2 means data is fetched through our way and this route is only taken when json server is not working
 
 const loadBlogV2 = async () => {
-  console.log('degbug')
   let response = await fetch("../data/db.json");
   let data = await response.json();
   if (data) {
@@ -54,6 +53,9 @@ const renderBlog = async () => {
   let header = document.getElementById("header");
   let content = document.getElementById("content");
   let comments = document.getElementById("comments");
+  if (blog) {
+    document.title = blog.title
+  }
   console.log(comments)
   if (header && blog) {
     header.innerHTML = `
@@ -82,6 +84,9 @@ const renderBlog = async () => {
             `
       );
     });
+  }
+  else {
+    window.location.href = '/notFound.html'
   }
 };
 async function addComment() {
