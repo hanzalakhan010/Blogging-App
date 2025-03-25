@@ -13,7 +13,7 @@ const urlParams = new URLSearchParams(queryString);
 const apiKey = "lZE8TZ/P5vjFf8ruEpBU+w==PMRnYSk8dj5A2t5f";
 let currentBlog = Number(urlParams.get("id"));
 let blog = undefined;
-var host = "http://localhost:5555";
+var host = "https://studious-carnival-644w6rgwr9p2rq9q-5555.app.github.dev";
 // V1 means data is simply fetched over json server
 const loadBlog = () => __awaiter(void 0, void 0, void 0, function* () {
     try {

@@ -1,6 +1,6 @@
 // V1 means data is simply fetched over json server
 let blogs: Blog[] = [];
-var host: string = "http://localhost:5555";
+var host: string = "https://studious-carnival-644w6rgwr9p2rq9q-5555.app.github.dev";
 let totalBlogs = 40
 
 let queryString = window.location.href.split("?")[1];

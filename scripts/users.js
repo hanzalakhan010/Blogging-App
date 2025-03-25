@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-let host = "http://localhost:5555";
+let host = "https://studious-carnival-644w6rgwr9p2rq9q-5555.app.github.dev";
 let users = [];
 function getUserName(id) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -23,7 +23,6 @@ function getUserName(id) {
                 let response = yield fetch('../data/db.json');
                 let data = yield response.json();
                 if (data) {
-                    // console.log(data.users)
                     users = data.users;
                 }
             }
@@ -33,4 +32,37 @@ function getUserName(id) {
         return user ? user.name : 'Anonynums';
     });
 }
+const auth = () => __awaiter(void 0, void 0, void 0, function* () {
+    let username = document.getElementById('username').value;
+    let passsword = document.getElementById('password').value;
+    let status = document.getElementById('status');
+    if (username && passsword) {
+        let response = yield fetch(`${host}/users`);
+        let data = yield response.json();
+        if (data) {
+            let userLogin = data.find((user) => user.username == username && user.password == passsword);
+            if (userLogin) {
+                if (status) {
+                    status.innerText = 'Success';
+                    localStorage.setItem('userid', userLogin.id.toString());
+                    localStorage.setItem('username', username);
+                    localStorage.setItem('password', passsword);
+                    console.log('success');
+                }
+            }
+        }
+    }
+});
+const onLoadFunc = () => {
+    let username = localStorage.getItem('username');
+    let password = localStorage.getItem('password');
+    let form = document.getElementById('form');
+    if (username && password) {
+        if (form) {
+            form.remove();
+        }
+    }
+};
+window.onLoadFunc = onLoadFunc;
+window.auth = auth;
 export default getUserName;

@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="scripts/blog.js" type="module"></script>
-    <script src="scripts/users.js" type="module"></script>
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/blog.css" />
-    <title></title>
+    <link rel="stylesheet" href="./styles/user.css" />
+    <script src="scripts/users.js" defer type="module"></script>
+    <title>User</title>
   </head>
 
-  <body onload="loadBlog()">
+  <body onload="onLoadFunc()">
     <nav>
       <ul>
         <li><a href = '/' target="_self">Home</a></li>
@@ -19,13 +18,11 @@
         <li><a href = '/user.html' target="_self">Account</a></li>
       </ul>
     </nav>
-
-    <section id="header"></section>
-    <section id="content"></section>
-    <section id = 'comments'>
-      <h3>Comments</h3>
-      <input id = 'commentText' placeholder="Comment">
-      <button onclick="addComment()">Add Comment</button>
-    </section>
+    <h2 id = "status"></h2>
+    <div id = 'form'>
+        <input id = 'username' placeholder="Username" type="text">
+        <input id = 'password' placeholder="Password" type = "password">
+        <button id ='loginBtn' onclick="auth()">Login</button>
+    </div>
   </body>
 </html>

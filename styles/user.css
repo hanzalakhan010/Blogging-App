@@ -1,0 +1,12 @@
+#form{
+    width: 30%;
+    margin-left:35%;
+    margin-right:30%;
+    margin-top: 5%;
+    gap:20px;
+    display: flex;
+    flex-direction: column;
+}
+#form input ,#form button{
+    font-size: x-large;
+}

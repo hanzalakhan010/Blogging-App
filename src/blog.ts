@@ -4,7 +4,7 @@ const urlParams = new URLSearchParams(queryString);
 const apiKey: string = "lZE8TZ/P5vjFf8ruEpBU+w==PMRnYSk8dj5A2t5f";
 let currentBlog = Number(urlParams.get("id"));
 let blog: Blog | undefined = undefined;
-var host: string = "http://localhost:5555";
+var host: string = "https://studious-carnival-644w6rgwr9p2rq9q-5555.app.github.dev";
 
 // V1 means data is simply fetched over json server
 
